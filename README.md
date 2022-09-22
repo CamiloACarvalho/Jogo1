@@ -1,4 +1,4 @@
-# Sobre o Jogo1
+# Sobre o Jogo1 - Pula Mário 😂🤣
 
 Comecei a fazer esse jogo com base nesse vídeo https://www.youtube.com/watch?v=r9buAwVBDhA. 
 
