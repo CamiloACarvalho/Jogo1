@@ -3,6 +3,10 @@ const mario = document.querySelector ('.mario'); //Aqui estamos trazendo a class
 
 const bala = document.querySelector ('.bala'); //Aqui estamos trazendo a classe da bala criado no programa css
 
+const nuvem = document.querySelector ('.nuvem'); //Aqui estamos trazendo a classe da nuvem criado no programa css
+
+const fim = document.querySelector ('.fim'); //Aqui estamos trazendo a classe do gameover (fim) criado no programa css
+
 const pular = () => {
 
     mario.classList.add('pular'); //aqui estamos criando a classe pular, para quando pressionar a teclar o gif do mário pular
@@ -13,33 +17,41 @@ const pular = () => {
 
 }
 
-//vamos criar um looping para verificar toda hora se a bala atingiu mario, pq se atingir, perde
+//vamos criar um looping para verificar toda hora se a bala atingiu mario, pq se atingir, perde, logo para o jogo
 
 const loop = setInterval(() => {
 
-    const posicaoBala = bala.offsetLeft;
+    const posicaoBala = bala.offsetLeft; //criamos uma constante para saber a posição da bala
 
-    const posicaoMario = +window.getComputedStyle(mario).bottom.replace('px','');
+    const posicaoMario = +window.getComputedStyle(mario).bottom.replace('px',''); //como no java tem a opção offserbottom, que seria para medir o pulo do mário. Foi feito uma conversão de pixel para número para que pudesse contabilizar a altura que o mario pula para poder criar uma condição para dar game over
 
-    if (posicaoBala < 121 && posicaoBala > 0 && posicaoMario < 75 ){
+    const posicaoNuvem = nuvem.offsetLeft; //da mesma forma da bala, como é movimentação horizontal, fica mais fácil de saber a posição da núvem
 
-        bala.style.animation = 'none';
+    if (posicaoBala < 121 && posicaoBala > 0 && posicaoMario < 75 ) //condição para game over. 121 é a distância que ela enconsta no mario. 0 é pra saber se a pala passou do mario o ou não. caso ela não tenha passado pelo mario esse valor é maior que zero. e aposição do mario 75 é a altura do pulo dele, caso ele pule menos que isso, atingirá a bala. logo só será gameover, se todas essas condições forem satisfeitas
+    {
+        bala.style.animation = 'none'; //para pausar a bala no momento em que enconsta no mário.
 
         bala.style.left = `${posicaoBala}px`;
 
-        mario.style.animation = 'none';
+        mario.style.animation = 'none'; //para pausar o mnario no momento em que enconsta na bala.
 
         mario.style.bottom = `${posicaoMario}px`;
 
-        mario.src = 'over.png';
+        mario.src = 'over.png'; //quando o mário toca bala, troca a imagem, essa é a imagem que aparece quando o mario perde
 
-        mario.style.width = '125px';
+        mario.style.width = '125px'; //tamanho da imagem
 
-        mario.style.marginLeft = '0px';
+        mario.style.marginLeft = '0px'; //posicionamento da imagem a esquerda
 
-        mario.style.marginBottom = '15px';
+        mario.style.marginBottom = '15px'; //posicionamento da imagem em realação ao chão
 
-        clearInterval(loop);
+        nuvem.style.animation = 'none'; //parar a nuvem quando der game over
+
+        nuvem.style.left = `${posicaoNuvem}px`;
+
+        fim.style.display = 'block'; //aparecer o gif de game over quando o mario perder. O gif será desbloqueado, já foi bloqueado no style.css
+
+        clearInterval(loop); //para zerar o loop
 
     }
     
@@ -47,3 +59,4 @@ const loop = setInterval(() => {
 
 
 document.addEventListener ('keydown', pular); //Esse código permite que toda vez eu apertar qualquer tecla, do meu teclado (keydown), o mário faz a ação de pular. criarei um classe chamada "pular" e ela também será "anexada" no código html, dentro do gif do mário correndo
+
