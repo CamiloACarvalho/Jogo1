@@ -122,7 +122,7 @@
         bottom: 0;
     }
 
-    35% /*nesse ponto da animação ele vai permanecer no alto, é como se fosse uma desaceleração da animação*/
+    45% /*nesse ponto da animação ele vai permanecer no alto, é como se fosse uma desaceleração da animação*/
     {
         bottom: 120px;
     }
@@ -132,7 +132,7 @@
         bottom: 120px;
     }
 
-    65% /*nesse ponto da animação ele vai permanecer no alto, é como se fosse uma desaceleração da animação*/
+    55% /*nesse ponto da animação ele vai permanecer no alto, é como se fosse uma desaceleração da animação*/
     {
         bottom: 120px;
     }
@@ -141,5 +141,20 @@
     {
         bottom: 0;
     }
+}
+
+.fim
+{
+    width: 475px; /*Tamanho da tela de game over*/
+
+    position: inherit; /*Essa posição é para ficar a frente de todos os outros objetos*/
+
+    display: block; /*para aparecer o gif em formato de bloco*/
+
+    margin-left: auto; /*para centralizar o gif*/
+
+    margin-right: auto; /*para centralizar o gif*/
+
+    display: none; /*para ocutar o gif*/
 }
 
