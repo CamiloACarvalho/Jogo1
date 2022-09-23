@@ -12,4 +12,9 @@ Abraços
 PS.: Tentei criar um contador no arquivo script.js, porém não consegui pensar em como criar uma variávei para receber o contador feito em javaScript.
 Caso alguém saiba, tenha uma noção, favor ajudar 😁
 
+PS.2: Também estou tendo dificuldade para hospedar o esse jogo no site. Na verdade já "consegui", mas está dando erro. 
+Esse o link que o GitHub gerou para esse jogo: https://camiloacarvalho.github.io/Jogo1/ .
+Caso alguém saiba como arrumar esse erro, favor me ensinar? Please? 😁
+
+
 ![HahahaThatsAllFolksGIF](https://user-images.githubusercontent.com/111397870/191869320-5b743ca6-adb7-40fc-aeaf-f7a727cfd016.gif)
