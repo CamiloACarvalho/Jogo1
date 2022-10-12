@@ -16,5 +16,8 @@ PS.2: Também estou tendo dificuldade para hospedar o esse jogo no site. Na verd
 Esse o link que o GitHub gerou para esse jogo: https://camiloacarvalho.github.io/Jogo1/ .
 Caso alguém saiba como arrumar esse erro, favor me ensinar? Please? 😁
 
+#
+
+<div align="center">
 
 ![HahahaThatsAllFolksGIF](https://user-images.githubusercontent.com/111397870/191869320-5b743ca6-adb7-40fc-aeaf-f7a727cfd016.gif)
